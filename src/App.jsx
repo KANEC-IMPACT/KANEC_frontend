@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 // ── Layout & Common ───────────────────────────────────────────────────────
 import Navbar from './newcomponents/Navbar';
 import Footer from './newcomponents/Footer';
+import ScrollToTop from './components/ScrollToTop'; // ← Add this import
 
 // ── Landing sections ───────────────────────────────────────────────────────
 import Hero from './newcomponents/Hero';
@@ -29,7 +30,7 @@ import Projects from './pages/Projects';
 
 // ── About & FAQ Pages ─────────────────────────────────────────────────────
 import About from './newcomponents/About';
-import FAQ from './newcomponents/FAQ'; // ← Added FAQ import
+import FAQ from './newcomponents/FAQ';
 
 // ── Context & Auth ────────────────────────────────────────────────────────
 import { ThemeProvider } from './pages/dashboard/ThemeContext';
@@ -53,6 +54,7 @@ const AppContent = () => {
 
   return (
     <>
+      <ScrollToTop /> {/* ← Add this component */}
       {showLayout && <Navbar />}
 
       <Routes>
