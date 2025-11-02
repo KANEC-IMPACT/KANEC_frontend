@@ -27,8 +27,9 @@ import Reports from './pages/dashboard/Reports';
 import Settings from './pages/dashboard/Settings';
 import Projects from './pages/Projects';
 
-// ── NEW: About – Fixed path & lowercase route ─────────────────────────────
-import About from './newcomponents/About'; // ← Correct import
+// ── About & FAQ Pages ─────────────────────────────────────────────────────
+import About from './newcomponents/About';
+import FAQ from './newcomponents/FAQ'; // ← Added FAQ import
 
 // ── Context & Auth ────────────────────────────────────────────────────────
 import { ThemeProvider } from './pages/dashboard/ThemeContext';
@@ -94,12 +95,23 @@ const AppContent = () => {
           }
         />
 
-        {/* ── ABOUT PAGE – Fixed path & lowercase ── */}
+        {/* ── ABOUT PAGE ── */}
         <Route
           path="/about"
           element={
             <PageWrapper>
               <About />
+              <Footer />
+            </PageWrapper>
+          }
+        />
+
+        {/* ── FAQ PAGE – Added route ── */}
+        <Route
+          path="/faq"
+          element={
+            <PageWrapper>
+              <FAQ />
               <Footer />
             </PageWrapper>
           }
