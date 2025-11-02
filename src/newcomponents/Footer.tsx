@@ -1,22 +1,42 @@
 import './footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerSections = [
     {
       title: 'Platform',
-      links: ['How It Works', 'About Us', 'Our Story', 'FAQ', 'Contact'],
+      links: [
+        { name: 'How It Works', path: '/how-it-works' },
+        { name: 'About Us', path: '/about' },
+        { name: 'Our Story', path: '/about' },
+        { name: 'FAQ', path: '/faq' },
+        { name: 'Contact', path: '/contact' }
+      ],
     },
     {
       title: 'Browse',
-      links: ['Browse Projects', 'Funded Projects', 'Organizations'],
+      links: [
+        { name: 'Browse Projects', path: '/projects' },
+        { name: 'Funded Projects', path: '/projects?filter=funded' },
+        { name: 'Organizations', path: '/organizations' }
+      ],
     },
     {
       title: 'Resources',
-      links: ['Blog', 'Documentation', 'Help Center', 'Whitepaper'],
+      links: [
+        { name: 'Blog', path: '/blog' },
+        { name: 'Documentation', path: '/docs' },
+        { name: 'Help Center', path: '/help' },
+        { name: 'Whitepaper', path: '/whitepaper' }
+      ],
     },
     {
       title: 'Legal',
-      links: ['Privacy Policy', 'Terms of Service', 'Transparency'],
+      links: [
+        { name: 'Privacy Policy', path: '/privacy' },
+        { name: 'Terms of Service', path: '/terms' },
+        { name: 'Transparency', path: '/transparency' }
+      ],
     },
   ];
 
@@ -42,9 +62,9 @@ const Footer = () => {
               <ul className="footer-links">
                 {section.links.map((link, idx) => (
                   <li key={idx}>
-                    <a href="#" className="footer-link">
-                      {link}
-                    </a>
+                    <Link to={link.path} className="footer-link">
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
