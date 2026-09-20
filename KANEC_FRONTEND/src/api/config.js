@@ -1,7 +1,7 @@
 // src/api/config.js
 import axios from 'axios';
 
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.konasalti.com/kanec';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://kanecbackend.onrender.com';
 
 export const API_CONFIG = {
   // ===================== AUTH ENDPOINTS =====================
