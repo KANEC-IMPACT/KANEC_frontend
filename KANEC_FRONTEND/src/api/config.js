@@ -1,7 +1,7 @@
 // src/api/config.js
 import axios from 'axios';
 
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://kanecbackend.onrender.com';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'; // Default to localhost if not set
 
 export const API_CONFIG = {
   // ===================== AUTH ENDPOINTS =====================
