@@ -5,39 +5,6 @@ import { useState, useEffect } from "react";
 import "./About.css";
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: "Elizabeth Okokon",
-      role: "PROJECT MANAGER / HEDERA DEVELOPER",
-      image: "public/LIZZY.png"
-    },
-    {
-      name: "Akinrogunde Omomijudeoluwa",
-      role: "BACKEND & BLOCKCHAIN DEVELOPER",
-      image: "public/JOLA.jpeg"
-    },
-    {
-      name: "Eze kelechi Joseph",
-      role: "FRONTEND DEVELOPER",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
-    },
-    {
-      name: "Esimke Chisom Emmanuel",
-      role: "FRONTEND DEVELOPER",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop"
-    },
-    {
-      name: "Olise Oseyenum Kenneth",
-      role: "UI/UX DESIGNER",
-      image: "public/OLISE.jpeg"
-    },
-    {
-      name: "Isaac Ugwu Chinenye",
-      role: "BACKEND & BLOCKCHAIN DEVELOPER",
-      image: "/kanecteam3.jpg"
-    }
-  ];
-
   // Background images for slideshow
   const backgroundImages = [
     "https://images.unsplash.com/photo-1491841573335-f6415a3d0f3d?w=1920&h=1080&fit=crop", // open book
